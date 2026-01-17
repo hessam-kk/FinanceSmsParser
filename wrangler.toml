@@ -1,0 +1,23 @@
+name = "bank-bot"
+main = "src/index.ts"
+compatibility_date = "2026-08-01"
+compatibility_flags = ["nodejs_compat"]
+
+# ---------------------------------------------------------------------------
+# D1 database
+#
+# Create the database once with:
+#   npx wrangler d1 create bankbot
+# then paste the returned `database_id` below. The zero UUID is a placeholder
+# that works for local development but MUST be replaced before deploying.
+# ---------------------------------------------------------------------------
+[[d1_databases]]
+binding = "DB"
+database_name = "bankbot"
+database_id = "def60b02-ed8a-4458-bba3-bc4a9a17b1e7"
+migrations_dir = "migrations"
+
+# ---------------------------------------------------------------------------
+# All configuration lives in secrets (npx wrangler secret put <NAME>) and in
+# local development in the .dev.vars file (see .dev.vars.example).
+# ---------------------------------------------------------------------------
