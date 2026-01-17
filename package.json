@@ -1,0 +1,30 @@
+{
+  "name": "bank-telegram-bot",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Single-user Telegram bot: forwards bank SMS → parses transaction → asks for a title → appends to Google Sheets. Runs entirely on Cloudflare Workers + D1.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "build": "wrangler deploy --dry-run --outdir=dist",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "db:migrate:local": "wrangler d1 migrations apply bankbot --local",
+    "db:migrate:remote": "wrangler d1 migrations apply bankbot --remote"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.22.0",
+    "@cloudflare/workers-types": "^5.20260826.1",
+    "@types/node": "^22.10.2",
+    "miniflare": "^5.20260815.0-alpha",
+    "typescript": "^5.7.2",
+    "vitest": "^4.1.11",
+    "wrangler": "^4.127.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.1": true,
+    "workerd@1.20260815.1": true,
+    "workerd@1.20260826.1": true
+  }
+}
