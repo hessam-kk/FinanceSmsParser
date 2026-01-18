@@ -1,0 +1,25 @@
+# Copy this file to `.dev.vars` and fill in your own values.
+# NEVER commit the real `.dev.vars` file.
+#
+# Production secrets are set with `npx wrangler secret put <NAME>` instead.
+
+# Telegram bot token from @BotFather. For local testing you may use a token
+# from the official test environment (https://core.telegram.org/bots/webapps#testing-local-bots).
+# A token starting with "test-" switches the bot to the Telegram test API endpoint.
+TELEGRAM_BOT_TOKEN=
+
+# Your numeric Telegram chat/user ID (e.g. 123456789). Only this account is allowed.
+TELEGRAM_ALLOWED_CHAT_ID=
+
+# Google service account credentials (from the JSON key file you download).
+GOOGLE_SERVICE_ACCOUNT_EMAIL=
+GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY=
+
+# Google Sheets destination.
+GOOGLE_SHEET_ID=
+GOOGLE_SHEET_NAME=Transactions
+
+# Random secret string that Telegram will send as the
+# `X-Telegram-Bot-Api-Secret-Token` header on every webhook update.
+# Used to authenticate incoming webhook requests. Leave empty to disable.
+TELEGRAM_WEBHOOK_SECRET=
