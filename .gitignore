@@ -14,3 +14,6 @@ dist/
 
 # Coverage output
 coverage/
+
+# Agent scratch directory
+.freebuff/
